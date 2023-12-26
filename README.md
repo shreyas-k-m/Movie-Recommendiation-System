@@ -1,9 +1,9 @@
-Movie Recommendation System README
+##Movie Recommendation System README##
 Overview
 This Movie Recommendation System is designed to provide personalized movie recommendations based on three different recommendation approaches: Popularity-Based, Content-Based, and Collaborative Filtering. The system utilizes the TMDB (The Movie Database) and MovieLens datasets for movie information and user ratings.
 
 Project Links
-Hugging Face Space
+Hugging Face Space = https://huggingface.co/spaces/PlaygroundTeen/Movie-Master
 
 Username: admin
 Password: 1234
