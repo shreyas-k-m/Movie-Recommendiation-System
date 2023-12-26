@@ -1,21 +1,21 @@
 # Movie Recommendation System
 
-##Overview
+## Overview
 
 This Movie Recommendation System is designed to provide personalized movie recommendations based on three different recommendation approaches: Popularity-Based, Content-Based, and Collaborative Filtering. The system utilizes the TMDB (The Movie Database) and MovieLens datasets for movie information and user ratings.
 
-##Project Links
+## Project Links
 
 Hugging Face Space = https://huggingface.co/spaces/PlaygroundTeen/Movie-Master
 Username: admin
 Password: 1234
 Note: Click "Restart the space" if needed.
 
-##Dataset
+## Dataset
 TMDB Dataset = https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata?select=tmdb_5000_movies.csv
 MovieLens 20M Dataset = https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset
 
-##Approaches
+## Approaches
 1. Popularity-Based Recommendation
 This approach recommends movies based on their overall popularity. It suggests movies that are highly rated or have been frequently watched by users in the past.
 
