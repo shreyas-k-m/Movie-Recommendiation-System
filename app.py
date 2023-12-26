@@ -9,7 +9,7 @@ from streamlit_extras.badges import badge
 from streamlit_option_menu import option_menu
 
 from PIL import Image
-im = Image.open('images/video.png')
+im = Image.open('video.png')
 st.set_page_config(page_title="Movie Recommender System App",page_icon = im)
 
 import base64
@@ -27,14 +27,14 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-add_bg_from_local('images/wallpaper_login.gif')
+add_bg_from_local('wallpaper_login.gif')
 
 # --- USER AUTHENTICATION ---
 names = ["Admin_Login"]
 usernames = ["admin"]
 
 # load hashed passwords
-file_path = Path(__file__).parent / "pkl/hashed_pw.pkl"
+file_path = Path(__file__).parent / "hashed_pw.pkl"
 with file_path.open("rb") as file:
     hashed_passwords = pickle.load(file)
 
@@ -84,7 +84,7 @@ if authentication_status:
     if selected == "Popularity":
         @st.cache_data
         def load_movie_data():
-            return pd.read_pickle('pkl/popular.pkl')
+            return pd.read_pickle('popular.pkl')
         movies_df = load_movie_data()
 
         st.title('Top 50 Popular Movies')
@@ -133,9 +133,9 @@ if authentication_status:
 
             return recommended_movies,recommended_movie_posters
         
-        movies_dict = pickle.load(open('pkl/movies_content.pkl','rb'))
+        movies_dict = pickle.load(open('movies_content.pkl','rb'))
         movies = pd.DataFrame(movies_dict)
-        similarity = pickle.load(open('pkl/similarity_content.pkl','rb'))
+        similarity = pickle.load(open('similarity_content.pkl','rb'))
 
         selected_movie_name = st.selectbox(
             "Type or select a movie from the dropdown",
@@ -174,9 +174,9 @@ if authentication_status:
         st.title("Collaborative Filtering Recommendations")
         st.write("Find movies similar to your selected one in terms of user ratings and preferences.")
         
-        pt = pickle.load(open('pkl/pt_collaborative.pkl', 'rb'))
-        similarity_scores = pickle.load(open('pkl/similarity_collaborative.pkl', 'rb'))
-        movies = pickle.load(open('pkl/movies_collaborative.pkl', 'rb'))
+        pt = pickle.load(open('pt_collaborative.pkl', 'rb'))
+        similarity_scores = pickle.load(open('similarity_collaborative.pkl', 'rb'))
+        movies = pickle.load(open('movies_collaborative.pkl', 'rb'))
 
         available_movie_titles = pt.index.values
         selected_movie = st.selectbox("Type or select a movie from the dropdown", available_movie_titles)
@@ -219,7 +219,7 @@ if authentication_status:
         """,
         unsafe_allow_html=True
         )
-    add_bg_from_local('images/wallpaper_home.jpg')
+    add_bg_from_local('wallpaper_home.jpg')
 
 hide_default_format = """
        <style>
